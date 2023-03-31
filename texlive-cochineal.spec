@@ -1,6 +1,6 @@
 Name:		texlive-cochineal
 Version:	62063
-Release:	1
+Release:	2
 Summary:	Cochineal fonts with LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cochineal
