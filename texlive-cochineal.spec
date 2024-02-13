@@ -1,5 +1,5 @@
 Name:		texlive-cochineal
-Version:	68904
+Version:	69778
 Release:	1
 Summary:	Cochineal fonts with LaTeX support
 Group:		Publishing
