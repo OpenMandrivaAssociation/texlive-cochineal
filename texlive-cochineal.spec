@@ -3,7 +3,7 @@ Version:	70528
 Release:	1
 Summary:	Cochineal fonts with LaTeX support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cochineal
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cochineal
 License:	ofl lppl1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cochineal.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cochineal.doc.r%{version}.tar.xz
