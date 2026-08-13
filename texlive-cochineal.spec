@@ -1,9 +1,10 @@
 %global tl_name cochineal
 %global tl_revision 77682
+%global tl_version 1.085
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.085
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Cochineal fonts with LaTeX support
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cochineal.r%{tl_
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cochineal.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 Cochineal is a fork from the Crimson fonts (Roman, Italic, Bold,
@@ -29,3 +31,10 @@ Semibold styles up the same level would have required adding about 2000
 additional glyphs, which I could not even contemplate. The fonts are
 provided in OpenType and PostScript formats.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from cochineal:
+Map Cochineal.map
+TL_DROPIN_EOF
